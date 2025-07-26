@@ -1,0 +1,59 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease, fadeOut 0.5s ease 8s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.message {
+    font-size: 15px;
+    word-break: break-word;
+}
+
+.mod { color: #ff00ff; }     /* Morado neón */
+.vip { color: #00ffff; }     /* Cyan neón */
+.sub { color: #ff69b4; }     /* Rosado pastel */
+.default { color: #ffffff; } /* Blanco suave */
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
